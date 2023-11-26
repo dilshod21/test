@@ -13,7 +13,10 @@ const reducer = (state = myValue, action) => {
 
     switch (type) {
         case 'ON_LOG':
-            console.log("ON_LOG is working!");
+            const newData = {...state, data2: payload};
+            console.log(newData.data2);
+            return state;
+            break;
         default:
             break;
 
